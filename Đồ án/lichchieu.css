@@ -157,12 +157,13 @@ hr {
     height: 30px;
     width: 60px;
     background-color: black;
-    border: 3px solid #4d628d;
+    border-color: #4d628d;
     color: #4d628d;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 6px;
+    cursor: not-allowed;
 }
 .phimTime-item {
     height: 30px;
@@ -173,4 +174,10 @@ hr {
     justify-content: center;
     align-items: center;
     border-radius: 6px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+.phimTime-item a {
+    text-decoration: none;
+    color: white;
 }

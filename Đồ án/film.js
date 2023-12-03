@@ -106,7 +106,23 @@ const renderFilms = (type) => {
     const filmElements = FILMS[type].map(
         (film) => `
         <div class="film-poster">
-            <img src="${film.poster}" alt="">
+            <div class="poster-wrapper">
+                <div class="poster-flip">
+                    <a href="film-detail.html" class="detail-btn">
+                        Chi tiết
+                    </a>
+                    <a href="muave.html" class="buy-now-btn">
+                        Mua vé
+                        <img src="images/ticket.png" alt=""/>
+                    </a>
+                    <p>Thời lượng: <span>90 phút</span></p>
+                    <p>
+                        Thể loại: <span>Hành động, hài hước</span>
+                    </p>
+                    <p>Định dạng: <span>2D</span></p>
+                </div>
+                <img src="${film.poster}" alt="">
+            </div>
             <p><a href="film-detail.html">${film.name}</a></p>
             <p>khởi chiếu: ${film.ngayChieu}</p>
         </div>

@@ -143,12 +143,15 @@ const getTimeTags = (timeArray, currentHour, currentMinute) => {
             currentHour > hour || (currentHour === hour && currentMinute > min)
 
         return `
-            <div class="phimTime-item ${
-                isPassed && isTodaySelected ? 'passed' : ''
-            }">
-                ${_time}
-            </div>
-        `
+        <div class="phimTime-item ${
+            isPassed && isTodaySelected ? 'passed' : ''
+        }">  <a href="muave.html" style="pointer-events: ${
+            isPassed && isTodaySelected ? 'none' : 'auto'
+        }">
+            ${_time}
+            </a>
+        </div>
+    `
     })
     return timeElements.join('')
 }
@@ -247,6 +250,6 @@ today_lich.forEach((item) => {
     const thang = item.querySelector('.Thang')
 
     thu.innerText = item.dataset.label ?? DATES[dateObj.day]
-    ngay.innerText = dateObj.date
-    thang.innerText = dateObj.month
+    ngay.innerText = `0${dateObj.date}`.slice(-2)
+    thang.innerText = `Tháng ${dateObj.month}`
 })
